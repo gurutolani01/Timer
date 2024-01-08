@@ -1,0 +1,10 @@
+<p>timer-component works!</p>
+<div>
+    <h1>{{ displayTime }}</h1>
+    <button (click)="startTimer()" *ngIf="!timerRunning" class="go">Start</button>
+    <button (click)="resetTimer()" class="danger">Reset</button>
+    <button (click)="pauseTimer()" *ngIf="timerRunning" class="wait">Pause</button>
+    <button (click)="resumeTimer()" *ngIf="!timerRunning && timerPaused" class="go">
+      Resume
+    </button>
+  </div>
